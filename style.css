@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.bg {
+  position: relative;
+  background: url(jpg/LongRoadv2.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  /* animation: animateBackground 10s linear infinite; */
+  animation-delay: 0.5s;
+}
+
+.bg .go {
+  color: black;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  background-color: rgba(114, 139, 113, 0.726);
+  position: absolute;
+  border: 10px solid rgba(44, 136, 41, 0.692);
+  border-radius: 40px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.5s;
+}
+
+.go:hover {
+  font-size: 60px;
+  background-color: rgb(201, 123, 20);
+  border: 15px solid rgba(255, 230, 0, 0.925);
+  color: black;
+  text-shadow: 3px 5px 5px rgb(201, 123, 20);
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
+}
+
+.bg .stop {
+  color: black;
+  height: 170px;
+  width: 170px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  background-color: red;
+  position: absolute;
+  border: 10px solid black;
+  border-radius: 50%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.5s;
+}
+
+.stop:hover {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  font-size: 50px;
+  background-color: rgb(201, 20, 20);
+  border: 10px solid black;
+  color: black;
+  text-shadow: 3px 5px 5px rgb(201, 123, 20);
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
+  animation: shake 0.5s infinite;
+}
+
+.car {
+  position: absolute;
+  transform: scale(0.7, 0.7) translateX(-50%);
+  bottom: 8vh;
+  left: 45%;
+  /* animation: animateVehicle 2s; */
+}
+
+@keyframes animateBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes animateVehicle {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 45%;
+  }
+}
+
+@keyframes animateVehicleGo {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 45%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-45%, 5%) rotate(10deg);
+  }
+
+  50% {
+    transform: translate(-55%, 5%) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(-50, 0%) rotate(0deg);
+  }
+}
