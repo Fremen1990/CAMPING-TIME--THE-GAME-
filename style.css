@@ -122,3 +122,72 @@ body {
     transform: translate(-50, 0%) rotate(0deg);
   }
 }
+
+@media (min-width: 100px) and (max-width: 419px) {
+  .car {
+    left: 15%;
+    transform: scale(0.5, 0.5) translateX(-50%);
+  }
+  @keyframes animateVehicle {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 15%;
+    }
+  }
+
+  @keyframes animateVehicleGo {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 15%;
+    }
+  }
+}
+
+@media (min-width: 420px) and (max-width: 820px) {
+  .car {
+    bottom: -5%;
+    left: 30%;
+    transform: scale(0.4, 0.4) translateX(-50%);
+  }
+
+  .bg .go {
+    padding: 10px;
+    font-size: 35px;
+    border: 10px solid rgba(44, 136, 41, 0.692);
+    top: 5%;
+    left: 50%;
+  }
+
+  .bg .stop {
+    color: black;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 7px solid black;
+    font-size: 25px;
+    border-radius: 50%;
+    top: 5%;
+  }
+
+  @keyframes animateVehicle {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+
+  @keyframes animateVehicleGo {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+}
